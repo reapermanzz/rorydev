@@ -16,12 +16,10 @@ import org.json.JSONArray;
 
 public class TestCodeBox {
 
-    private JSONObject routeList = null;
-    public static TestCodeBox testM = new TestCodeBox();
     private Boolean debugMode = false;
     public static ArrayList<String> routeKeyArray = new ArrayList<String>();
 
-    public String checkForRoutes(ArrayList<String> qualifiers) {
+    public String checkForRoutesStrip(ArrayList<String> qualifiers) {
         // assemble route key and try to get a route
         String routeKey = new String(buildRoutekey(qualifiers));
         ArrayList qualifierHolder = qualifiers;
@@ -30,6 +28,7 @@ public class TestCodeBox {
         ArrayList<String> stripOrder = new ArrayList<String>();
         stripOrder.add("any.");
         stripOrder.add(routeKey);
+        //stripOrder.add("any.");
         for (int j = 0; j < 2; j++) { //this loop enables qualifiers to be stripped off off in forward and reverse directions to account for *any* wildcard being placed anywhere.
             qualifiers = new ArrayList(qualifierHolder);//re-init the qualifier list
             qualifierSize = qualifiers.size();//re-init the counter
@@ -42,14 +41,10 @@ public class TestCodeBox {
                 try {
                     // if this is not the first pass try to get a route using the wildcard first
                     if (firstTimeCounter == qualifierSize) {
-                        // callForRoute(routeKey);
-                        //showDebugMessage("Calling for ANY route first time....");
-                        //callForRoute(buildAnyRoutekey(qualifierHolder, qualifiers.size()));
+                        callForRoute(routeKey);
                     } else {
                         //showDebugMessage("Regular...");
-                        //callForRoute(stripOrder.get(0) + stripOrder.get(1));
-                        //showDebugMessage("Calling for ANY route....");
-                        //callForRoute(buildAnyRoutekey(qualifierHolder, qualifiers.size()));
+                        callForRoute(stripOrder.get(0) + stripOrder.get(1));
                     }
                 } catch (Exception e) {
                     // if this is not the first pass try to get a route without the wildcard
@@ -80,6 +75,50 @@ public class TestCodeBox {
         return "Finished Running";
     }
 
+    /**This method is designed to create a list of routekeys to query for, using a strip-off logic and wildcard replacement.
+     * Essentially is first strips off the last qualifier, tries that, then replaces that stripped off qualifier with
+     * an "any" wildcard, then rinse and repeat until the last qualifier, never replacing the first, as its the routing Rule.
+     *
+     * @param qualifiers - original list of qualifiers including the routing rule (always first qualifier)
+     * @return - an arrayList of routkeys, stripping off placeholders from right to left.
+     * @author - Rory Henderson
+     */
+    public ArrayList<String> buildRoutekeyStripLeft(ArrayList<String> qualifiers) {
+        //initialize the first route key build.
+        String routeKey = new String(buildRoutekey(qualifiers));
+        ArrayList <String> protectOriginalQualifiers = new ArrayList<String>(qualifiers);
+        ArrayList<String> routeKeys = new ArrayList<String>();
+        int qualifierSize = qualifiers.size();
+        int firstTimeCounter = qualifiers.size(); //holds a never-changing original size of qualifiers.
+        //stripOrder.add("any.");
+        qualifierSize = qualifiers.size();//re-init the counter
+        while (qualifierSize > 0) {
+            // if this is not the first pass try to get a route using the wildcard first
+            if (firstTimeCounter == qualifierSize) {
+                /*Not adding this key to the set - meaning, we've already got the original permutation covered in buildAnyRoutekey.
+                no point in querying for it twice.
+                 */
+                //routeKeys.add(routeKey);
+                callForRoute(routeKey);
+            } else {
+                //showDebugMessage("Regular...");
+                if(qualifierSize > 1){ //this ensures the routing Rule doesn't get added to the set by itself,
+                    // i.e. "support" rather than support.any.  We would never query JUST for a routing rule.
+                    //always routing Rule + qualifiers(1+);
+                    routeKeys.add(routeKey); //add the version of the routeKey WITHOUT the any wildcard too, just stripped.
+                }
+                routeKeys.add(routeKey + ".any"); //add the any wildcard to this permutation into the set.
+                callForRoute(routeKey + ".any");
+            }
+            protectOriginalQualifiers.remove(qualifierSize - 1); //strip off the last qualifier
+            routeKey = buildRoutekey(protectOriginalQualifiers); //re-initialize the routeKey based on stripping off the end one, left to right.
+            qualifierSize--; //loop countdown.
+        }
+        this.showDebugMessage("routeKeys List: " + routeKeys);
+        qualifiers = new ArrayList<String>(protectOriginalQualifiers);
+        return routeKeys;
+    }
+
     /**
      * The purpose of this method is to simply intake an array of Qualifiers, and put them together into a routeKey string.
      * This is a vanilla routeKey method - it just builds a basic string, unlike buildAnyRouteKey which is
@@ -87,6 +126,7 @@ public class TestCodeBox {
      *
      * @param qualifiers - the list of qualifiers to build into a routeKey string.
      * @return - The routeKey built from the qualifiers.
+     * @author - Rory Henderson
      */
     public String buildRoutekey(ArrayList<String> qualifiers) {
         String routeKey = new String();
@@ -110,13 +150,16 @@ public class TestCodeBox {
         return routeKey;
     }
 
-    /**The purpose of this method is to build all permutations of a route key based on an instruction set given.
+    /**
+     * The purpose of this method is to build all permutations of a route key based on an instruction set given.
      * its designed to iterate through the instruction sets and adhere to them in terms of replacing indexes with the any wildcard.
      * this enables us to build sets of routeKey permutations dynamically based on qualifier size and custom instructions.
-     * @param qualifiers - the original qualifiers by which to base all permutations off of.
+     *
+     * @param qualifiers       - the original qualifiers by which to base all permutations off of.
      * @param replacePositions - An ArrayList<ArrayList<String>> containing positions that you want to replace, as index strings. 0, 1, 2, etc... Each set of
      *                         index positions is a permutation for a routeKey.
      * @return - an ArrayList<String> of routeKeys to query for.
+     * @author - Rory Henderson
      */
     public ArrayList<String> buildAnyRoutekey(ArrayList<String> qualifiers, ArrayList<ArrayList> replacePositions) {
         String routeKey = new String();
@@ -193,6 +236,7 @@ public class TestCodeBox {
      * @param num1 - First integer to compare
      * @param num2 - Second integer to compare
      * @return
+     * @author - Rory Henderson
      */
     public Boolean compareTwoNumbers(int num1, int num2) {
         if (num1 > num2) {
@@ -202,35 +246,7 @@ public class TestCodeBox {
         } else {
             return true;
         }
-    }
-
-    public ArrayList allAnyCombination(ArrayList<String> qualifiers) {
-        String routingRule = qualifiers.get(0); //extract the qualifier before calculating ANY permutations.
-        int offSet = qualifiers.size() - 1;
-        ArrayList<String> quals = new ArrayList<String>(qualifiers); //initialize a copy of the incoming object to change
-        ArrayList<ArrayList> combinations = new ArrayList<ArrayList>(); //ArrayList of arraylists to house the various combinations returned.
-        int indexShift = 1;
-        int ignoreForShift = 0;
-        while (ignoreForShift < qualifiers.size()) {
-            //this.showDebugMessage("Third loop: " + ignoreForShift);
-            while (indexShift < qualifiers.size()) {
-                for (int i = 0; i < qualifiers.size(); i++) {
-                    if (!compareTwoNumbers(i, ignoreForShift)) {
-                        quals.set(i, "any");
-                    }
-                }
-                combinations.add(quals);
-                quals = new ArrayList<>(qualifiers); //re-initialize the working array to insert the next wildcard combination.
-                indexShift++;
-                //this.showDebugMessage("2nd loop");
-            }
-            indexShift = 1; //re-init the 2nd inner loop
-            quals = new ArrayList<>(qualifiers); //re-initialize the working array to insert the next wildcard combination.
-            ignoreForShift++;
-        }
-        return combinations;
-    }
-
+}
     /**
      * The purpose of this is to create a powerset of array positions that represent all possible combinations of qualifier
      * array to replace as *any*.  It automatically generates, based on the size of the qualifier set, what positions need to change to
@@ -238,6 +254,7 @@ public class TestCodeBox {
      *
      * @param qualifiers - this is the input qualifier set
      * @return - an ArrayList of qualifier position changes.  Each set within the array is an iteration of wildcards to replace with Any in the qualifier array.
+     * @author - Rory Henderson
      */
     public ArrayList<ArrayList> createPowersetPositions(ArrayList<String> qualifiers) {
         Set<String> qualifierSet = new LinkedHashSet<>(); //initialize a set to hold the qualifiers.
@@ -264,6 +281,7 @@ public class TestCodeBox {
      *
      * @param qualifiers   - the original qualifier array to compose routeKeys from
      * @param currentIndex - the array index to shift for the coverage pattern of replacing *any* wildcard on the qualifiers.
+     * @author - Rory Henderson
      */
     public void makeAllPermutations(ArrayList<String> qualifiers, int currentIndex) {
         ArrayList<String> currentArray = new ArrayList<String>();
@@ -290,6 +308,7 @@ public class TestCodeBox {
      * if not, ignore.
      *
      * @param message - the string you want to print to the console
+     * @author - Rory Henderson
      */
     public void showDebugMessage(String message) {
         if (debugMode) {

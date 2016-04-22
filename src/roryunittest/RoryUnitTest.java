@@ -12,6 +12,7 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -20,63 +21,90 @@ import static org.junit.Assert.*;
  * @author ReaperMan
  */
 public class RoryUnitTest {
+
     /**
-     * @param args the command line arguments
+     * This method creates a basic set of qualifiers, with blank values, and ensures that the buildRoutekey method
+     * puts together an appropriate string dealing with nulls.
      */
-    public static void main(String[] args) {
-        try {
-            TestCodeBox box = new TestCodeBox();
-            //create a qualifiers array
-            ArrayList<String> quals = new ArrayList();
-            box.setdebugMode(true);
-
-            quals.add("support");
-            quals.add("english");
-            quals.add("exchange");
-            quals.add("sev1");
-            quals.add("enterprise3");
-            quals.add("abc");
-            quals.add("");
-            //box.checkForRoutes(quals);
-            //System.out.println(box.buildRoutekey(quals));
-            //System.out.println(box.buildAnyRoutekey(quals, 7));
-
-            //box.allAnyCombination(quals);
-
-        } catch (Exception e) {
-            System.out.println("Exception in RoryUnitTest.java, error: " + e);
-        }
-
-    }
-
     @Test
-    public void testCreateCombination() {
+    public void testBuildRoutekey(){
         TestCodeBox testBox = new TestCodeBox();
-        testBox.setdebugMode(true);
-        testBox.showDebugMessage("Testing execution of method...");
+        //testBox.setdebugMode(true);
+        System.out.println("Running test testBuildRoutekey...");
         ArrayList<String> qualifiers = new ArrayList<String>();
-
         qualifiers.add("support");
         qualifiers.add("english");
-        //qualifiers.add("");
-        //qualifiers.add("");
         qualifiers.add("exchange");
         qualifiers.add("sev1");
-        /*qualifiers.add("enterprise3");
-        qualifiers.add("abc");*/
-
-        System.out.println(testBox.createPowersetPositions(qualifiers));
-        testBox.buildAnyRoutekey(qualifiers, testBox.createPowersetPositions(qualifiers));
-        /*ArrayList<ArrayList> list = new ArrayList<ArrayList>(testBox.allAnyCombination(qualifiers));
-        for(ArrayList<ArrayList> theList: list){
-            System.out.println(theList);
-        }*/
-        //System.out.println(testBox.createPowersetPositions(qualifiers));
-        //System.out.println(testBox.createPowersetPositions(qualifiers).size());
-        //testBox.makeAllPermutations(qualifiers, qualifiers.size());
-        //System.out.println(testBox.routeKeyArray);
-
-
+        qualifiers.add("");
+        qualifiers.add("enterprise3");
+        qualifiers.add("abc");
+        qualifiers.add("");
+        int qualSize = qualifiers.size()-1; //take off one slot for the routingRule
+        String routeKey = testBox.buildRoutekey(qualifiers);
+        //calculate the possible number of combos
+        int permutations = 1;
+        for(int i = 0; i<qualSize; i++) {//times it by 2 for each slot that is replaced.
+            permutations = permutations * 2;
+        }
     }
 
+    /**
+     * This method calls the buildAnyRoutekey method, ensuring that it creates the correct amount of permutations for *any*
+     * wildcard replacement, without stripping off qualifiers.
+     */
+    @Test
+    public void testBuildAnyRoutekey() {
+        TestCodeBox testBox = new TestCodeBox();
+        //testBox.setdebugMode(true);
+        System.out.println("Running test testBuildAnyRoutekey...");
+        ArrayList<String> qualifiers = new ArrayList<String>();
+        qualifiers.add("support");
+        qualifiers.add("english");
+        qualifiers.add("exchange");
+        qualifiers.add("sev1");
+        qualifiers.add("enterprise3");
+        qualifiers.add("abc");
+        qualifiers.add("");
+        int qualSize = qualifiers.size()-1; //take off one slot for the routingRule
+        ArrayList<String> allRouteKeys = testBox.buildAnyRoutekey(qualifiers, testBox.createPowersetPositions(qualifiers));
+        //calculate the possible number of combos
+        int permutations = 1;
+        for(int i = 0; i<qualSize; i++) {//times it by 2 for each slot that is replaced.
+            permutations = permutations * 2;
+        }
+        assertEquals(allRouteKeys.size(), permutations);
+        System.out.println("testBuildAnyRoutekey successful");
+    }
+
+    /**
+     * Creates a simulated set of qualifiers, and validates that we receive the correct number of
+     * routekey permutations based on the strip-off method, right to left.
+     */
+    @Test
+    public void testBuildRoutekeysStripLeft(){
+        TestCodeBox testBox = new TestCodeBox();
+        //testBox.setdebugMode(true);
+        System.out.println("Running test buildRoutekeysStripLeft...");
+        //simulate a set of qualifiers.  The first one is always the routing Rule (support in case below).
+        ArrayList<String> qualifiers = new ArrayList<String>();
+        qualifiers.add("support");
+        qualifiers.add("english");
+        qualifiers.add("exchange");
+        qualifiers.add("sev1");
+        qualifiers.add("enterprise3");
+        qualifiers.add("abc");
+        qualifiers.add("");
+
+        //initialize a list of routeKeys and call the method to return them.
+        ArrayList<String> listOfRouteKeys = testBox.buildRoutekeyStripLeft(qualifiers);
+        int qualifierSize = qualifiers.size();
+        /*size times 2(one try with qualifier, one stripped off with any), minus 2... one for the original qualifier,
+        because i ignore that for duplicate coverage, and one for removing a position to ignore the routingRule,
+        which is always the first item in the qualifiers.
+         */
+        int permutations = ((qualifierSize-1)*2)-1;
+        assertSame(listOfRouteKeys.size(), permutations);
+        System.out.println("testBuildRoutekeysStripLeft successful");
+    }
 }
