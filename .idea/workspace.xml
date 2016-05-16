@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91792478-342b-4d0d-b3f0-ebcfaea2f62c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RoryUnitTest/RTools/TestCodeBox.class" afterPath="$PROJECT_DIR$/out/production/RoryUnitTest/RTools/TestCodeBox.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RoryUnitTest/roryunittest/RoryUnitTest.class" afterPath="$PROJECT_DIR$/out/production/RoryUnitTest/roryunittest/RoryUnitTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/libraries.xml" afterPath="$PROJECT_DIR$/.idea/libraries/libraries.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RoryUnitTest.iml" afterPath="$PROJECT_DIR$/RoryUnitTest.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RTools/TestCodeBox.java" afterPath="$PROJECT_DIR$/src/RTools/TestCodeBox.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/roryunittest/RoryUnitTest.java" afterPath="$PROJECT_DIR$/src/roryunittest/RoryUnitTest.java" />
     </list>
@@ -30,16 +30,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="TestCodeBox.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestCodeBox.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/RTools/TestCodeBox.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="129" column="7" selection-start-line="129" selection-start-column="7" selection-end-line="129" selection-end-column="7" />
+            <state relative-caret-position="260">
+              <caret line="363" column="52" selection-start-line="363" selection-start-column="52" selection-end-line="363" selection-end-column="52" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="method#checkForRoutesStrip#0;class#TestCodeBox#0" expanded="false" />
                 <element signature="docComment;method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
                 <element signature="method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
-                <element signature="e#5067#5138#0" expanded="false" />
+                <element signature="e#5803#5874#0" expanded="false" />
                 <element signature="docComment;method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
                 <element signature="method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
                 <element signature="docComment;method#buildAnyRoutekey#0;class#TestCodeBox#0" expanded="false" />
@@ -52,24 +53,26 @@
                 <element signature="method#makeAllPermutations#0;class#TestCodeBox#0" expanded="false" />
                 <element signature="docComment;method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
                 <element signature="method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
+                <element signature="e#16911#16936#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RoryUnitTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RoryUnitTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/roryunittest/RoryUnitTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+            <state relative-caret-position="277">
+              <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="docComment;class#RoryUnitTest#0" expanded="false" />
+                <element signature="docComment;method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
                 <element signature="method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
                 <element signature="docComment;method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
                 <element signature="method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
+                <element signature="docComment;method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
                 <element signature="method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
-                <marker date="1461352325831" expanded="false" signature="437:626" placeholder="/**...*/" />
-                <marker date="1461352325831" expanded="false" signature="2802:2986" placeholder="/**...*/" />
               </folding>
             </state>
           </provider>
@@ -93,16 +96,17 @@
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" />
-  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1911" />
+    <option name="x" value="-9" />
     <option name="y" value="-9" />
-    <option name="width" value="1698" />
-    <option name="height" value="1068" />
+    <option name="width" value="1938" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -130,8 +134,8 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -195,33 +199,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea/libraries/junit-4.12.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea/libraries/httpcore-4.4.jar!/" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="JUnit.RoryUnitTest.testBuildRoutekey">
-    <configuration default="false" name="All in RoryUnitTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="RoryUnitTest" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.RoryUnitTest.testGreaterThanTLS1HTTPS">
     <configuration default="false" name="RoryUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -313,6 +296,32 @@
       <option name="PACKAGE_NAME" value="roryunittest" />
       <option name="MAIN_CLASS_NAME" value="roryunittest.RoryUnitTest" />
       <option name="METHOD_NAME" value="testBuildRoutekey" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="RoryUnitTest.testGreaterThanTLS1HTTPS" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="roryunittest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="RoryUnitTest" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="roryunittest" />
+      <option name="MAIN_CLASS_NAME" value="roryunittest.RoryUnitTest" />
+      <option name="METHOD_NAME" value="testGreaterThanTLS1HTTPS" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -728,19 +737,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.All in RoryUnitTest (1)" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.RoryUnitTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.RoryUnitTest.testBuildRoutekeysStripLeft" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.RoryUnitTest.testBuildAnyRoutekey" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.RoryUnitTest.testBuildRoutekey" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.RoryUnitTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.RoryUnitTest.testBuildRoutekeysStripLeft" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.RoryUnitTest.testBuildAnyRoutekey" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.RoryUnitTest.testBuildRoutekey" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.RoryUnitTest.testGreaterThanTLS1HTTPS" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.RoryUnitTest.testBuildRoutekey" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.RoryUnitTest.testBuildAnyRoutekey" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.RoryUnitTest.testBuildRoutekeysStripLeft" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.RoryUnitTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.All in RoryUnitTest (1)" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.RoryUnitTest.testGreaterThanTLS1HTTPS" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.RoryUnitTest.testBuildRoutekey" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.RoryUnitTest.testBuildAnyRoutekey" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.RoryUnitTest.testBuildRoutekeysStripLeft" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.RoryUnitTest" />
       </list>
     </recent_temporary>
   </component>
@@ -770,28 +779,13 @@
       <workItem from="1461340896765" duration="76000" />
       <workItem from="1461341003477" duration="333000" />
       <workItem from="1461341374868" duration="12505000" />
+      <workItem from="1461607574573" duration="795000" />
+      <workItem from="1463403596343" duration="1406000" />
+      <workItem from="1463405324733" duration="9542000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RoryUnitTest_testBuildAnyRoutekey - 2016.04.22 at 14h 54m 37s.xml">
-      <configuration name="RoryUnitTest.testBuildAnyRoutekey" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RoryUnitTest_testBuildAnyRoutekey - 2016.04.22 at 14h 55m 20s.xml">
-      <configuration name="RoryUnitTest.testBuildAnyRoutekey" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RoryUnitTest_testBuildAnyRoutekey - 2016.04.22 at 14h 56m 32s.xml">
-      <configuration name="RoryUnitTest.testBuildAnyRoutekey" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RoryUnitTest_testBuildAnyRoutekey - 2016.04.22 at 14h 59m 53s.xml">
-      <configuration name="RoryUnitTest.testBuildAnyRoutekey" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RoryUnitTest_testBuildAnyRoutekey - 2016.04.22 at 15h 00m 50s.xml">
-      <configuration name="RoryUnitTest.testBuildAnyRoutekey" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RoryUnitTest_testBuildAnyRoutekey - 2016.04.22 at 15h 09m 47s.xml">
-      <configuration name="RoryUnitTest.testBuildAnyRoutekey" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="RoryUnitTest_testBuildAnyRoutekey - 2016.04.22 at 15h 10m 29s.xml">
       <configuration name="RoryUnitTest.testBuildAnyRoutekey" configurationId="JUnit" />
     </history-entry>
@@ -804,27 +798,45 @@
     <history-entry file="RoryUnitTest_testBuildRoutekey - 2016.04.22 at 15h 11m 56s.xml">
       <configuration name="RoryUnitTest.testBuildRoutekey" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="RoryUnitTest_testGreaterThanTLS1HTTPS - 2016.05.16 at 13h 27m 06s.xml">
+      <configuration name="RoryUnitTest.testGreaterThanTLS1HTTPS" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RoryUnitTest_testGreaterThanTLS1HTTPS - 2016.05.16 at 13h 27m 50s.xml">
+      <configuration name="RoryUnitTest.testGreaterThanTLS1HTTPS" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RoryUnitTest_testGreaterThanTLS1HTTPS - 2016.05.16 at 13h 28m 19s.xml">
+      <configuration name="RoryUnitTest.testGreaterThanTLS1HTTPS" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RoryUnitTest_testGreaterThanTLS1HTTPS - 2016.05.16 at 14h 03m 42s.xml">
+      <configuration name="RoryUnitTest.testGreaterThanTLS1HTTPS" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RoryUnitTest_testGreaterThanTLS1HTTPS - 2016.05.16 at 14h 24m 18s.xml">
+      <configuration name="RoryUnitTest.testGreaterThanTLS1HTTPS" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RoryUnitTest_testGreaterThanTLS1HTTPS - 2016.05.16 at 14h 25m 11s.xml">
+      <configuration name="RoryUnitTest.testGreaterThanTLS1HTTPS" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56617000" />
+    <option name="totallyTimeSpent" value="68360000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1911" y="-9" width="1698" height="1068" extended-state="6" />
-    <editor active="false" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32692307" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3267974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897604" sideWeight="0.34895834" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32158118" sideWeight="0.6510417" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32135075" sideWeight="0.6510417" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16666667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14583333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -855,7 +867,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/RTools/TestCodeBox.java</url>
-          <line>194</line>
+          <line>211</line>
           <properties class="RTools.TestCodeBox" />
         </line-breakpoint>
       </breakpoints>
@@ -870,13 +882,14 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/RTools/TestCodeBox.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="64">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#checkForRoutesStrip#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
-            <element signature="e#5067#5138#0" expanded="false" />
+            <element signature="e#5803#5874#0" expanded="false" />
             <element signature="docComment;method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#buildAnyRoutekey#0;class#TestCodeBox#0" expanded="false" />
@@ -889,6 +902,139 @@
             <element signature="method#makeAllPermutations#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="e#16911#16936#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/roryunittest/RoryUnitTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RTools/TestCodeBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#checkForRoutesStrip#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="docComment;method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="e#5803#5874#0" expanded="false" />
+            <element signature="docComment;method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="docComment;method#buildAnyRoutekey#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="method#buildAnyRoutekey#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="docComment;method#compareTwoNumbers#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="method#compareTwoNumbers#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="docComment;method#createPowersetPositions#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="method#createPowersetPositions#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="docComment;method#makeAllPermutations#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="method#makeAllPermutations#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="docComment;method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="e#16911#16936#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/roryunittest/RoryUnitTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RTools/TestCodeBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#checkForRoutesStrip#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="docComment;method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="e#5803#5874#0" expanded="false" />
+            <element signature="docComment;method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="docComment;method#buildAnyRoutekey#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="method#buildAnyRoutekey#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="docComment;method#compareTwoNumbers#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="method#compareTwoNumbers#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="docComment;method#createPowersetPositions#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="method#createPowersetPositions#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="docComment;method#makeAllPermutations#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="method#makeAllPermutations#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="docComment;method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="e#16911#16936#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/roryunittest/RoryUnitTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RTools/TestCodeBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#checkForRoutesStrip#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="docComment;method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="e#5803#5874#0" expanded="false" />
+            <element signature="docComment;method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="docComment;method#buildAnyRoutekey#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="method#buildAnyRoutekey#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="docComment;method#compareTwoNumbers#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="method#compareTwoNumbers#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="docComment;method#createPowersetPositions#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="method#createPowersetPositions#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="docComment;method#makeAllPermutations#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="method#makeAllPermutations#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="docComment;method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="e#16911#16936#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -898,13 +1044,14 @@
         <state relative-caret-position="224">
           <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="docComment;method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
-            <marker date="1461352325831" expanded="false" signature="437:626" placeholder="/**...*/" />
-            <marker date="1461352325831" expanded="false" signature="2802:2986" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -914,10 +1061,11 @@
         <state relative-caret-position="3616">
           <caret line="240" column="7" selection-start-line="240" selection-start-column="7" selection-end-line="240" selection-end-column="7" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#checkForRoutesStrip#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
-            <element signature="e#5067#5138#0" expanded="false" />
+            <element signature="e#5803#5874#0" expanded="false" />
             <element signature="docComment;method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#buildAnyRoutekey#0;class#TestCodeBox#0" expanded="false" />
@@ -930,6 +1078,7 @@
             <element signature="method#makeAllPermutations#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="e#16911#16936#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -939,13 +1088,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="docComment;method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
-            <marker date="1461352325831" expanded="false" signature="437:626" placeholder="/**...*/" />
-            <marker date="1461352325831" expanded="false" signature="2802:2986" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -955,10 +1105,11 @@
         <state relative-caret-position="3840">
           <caret line="240" column="7" selection-start-line="240" selection-start-column="7" selection-end-line="240" selection-end-column="7" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#checkForRoutesStrip#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
-            <element signature="e#5067#5138#0" expanded="false" />
+            <element signature="e#5803#5874#0" expanded="false" />
             <element signature="docComment;method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#buildAnyRoutekey#0;class#TestCodeBox#0" expanded="false" />
@@ -971,6 +1122,7 @@
             <element signature="method#makeAllPermutations#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="e#16911#16936#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -980,13 +1132,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="docComment;method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
-            <marker date="1461352325831" expanded="false" signature="437:626" placeholder="/**...*/" />
-            <marker date="1461352325831" expanded="false" signature="2802:2986" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -996,10 +1149,11 @@
         <state relative-caret-position="560">
           <caret line="205" column="0" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#checkForRoutesStrip#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
-            <element signature="e#5067#5138#0" expanded="false" />
+            <element signature="e#5803#5874#0" expanded="false" />
             <element signature="docComment;method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#buildAnyRoutekey#0;class#TestCodeBox#0" expanded="false" />
@@ -1012,6 +1166,7 @@
             <element signature="method#makeAllPermutations#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="e#16911#16936#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1021,13 +1176,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="docComment;method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
-            <marker date="1461352325831" expanded="false" signature="437:626" placeholder="/**...*/" />
-            <marker date="1461352325831" expanded="false" signature="2802:2986" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -1037,10 +1193,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#checkForRoutesStrip#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
-            <element signature="e#5067#5138#0" expanded="false" />
+            <element signature="e#5803#5874#0" expanded="false" />
             <element signature="docComment;method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#buildAnyRoutekey#0;class#TestCodeBox#0" expanded="false" />
@@ -1053,6 +1210,7 @@
             <element signature="method#makeAllPermutations#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="e#16911#16936#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1062,13 +1220,14 @@
         <state relative-caret-position="1088">
           <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="docComment;method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
-            <marker date="1461352325831" expanded="false" signature="437:626" placeholder="/**...*/" />
-            <marker date="1461352325831" expanded="false" signature="2802:2986" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -1078,10 +1237,11 @@
         <state relative-caret-position="384">
           <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#checkForRoutesStrip#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
-            <element signature="e#5067#5138#0" expanded="false" />
+            <element signature="e#5803#5874#0" expanded="false" />
             <element signature="docComment;method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#buildAnyRoutekey#0;class#TestCodeBox#0" expanded="false" />
@@ -1094,6 +1254,7 @@
             <element signature="method#makeAllPermutations#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="e#16911#16936#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1103,13 +1264,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="docComment;method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
-            <marker date="1461352325831" expanded="false" signature="437:626" placeholder="/**...*/" />
-            <marker date="1461352325831" expanded="false" signature="2802:2986" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -1119,10 +1281,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#checkForRoutesStrip#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
-            <element signature="e#5067#5138#0" expanded="false" />
+            <element signature="e#5803#5874#0" expanded="false" />
             <element signature="docComment;method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#buildAnyRoutekey#0;class#TestCodeBox#0" expanded="false" />
@@ -1135,6 +1298,7 @@
             <element signature="method#makeAllPermutations#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="e#16911#16936#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1144,13 +1308,14 @@
         <state relative-caret-position="1088">
           <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="docComment;method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
-            <marker date="1461352325831" expanded="false" signature="437:626" placeholder="/**...*/" />
-            <marker date="1461352325831" expanded="false" signature="2802:2986" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -1160,10 +1325,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#checkForRoutesStrip#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
-            <element signature="e#5067#5138#0" expanded="false" />
+            <element signature="e#5803#5874#0" expanded="false" />
             <element signature="docComment;method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#buildAnyRoutekey#0;class#TestCodeBox#0" expanded="false" />
@@ -1176,6 +1342,7 @@
             <element signature="method#makeAllPermutations#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="e#16911#16936#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1185,13 +1352,14 @@
         <state relative-caret-position="352">
           <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="docComment;method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
-            <marker date="1461352325831" expanded="false" signature="437:626" placeholder="/**...*/" />
-            <marker date="1461352325831" expanded="false" signature="2802:2986" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -1201,10 +1369,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#checkForRoutesStrip#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
-            <element signature="e#5067#5138#0" expanded="false" />
+            <element signature="e#5803#5874#0" expanded="false" />
             <element signature="docComment;method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#buildAnyRoutekey#0;class#TestCodeBox#0" expanded="false" />
@@ -1217,6 +1386,7 @@
             <element signature="method#makeAllPermutations#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="e#16911#16936#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1226,13 +1396,14 @@
         <state relative-caret-position="352">
           <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="docComment;method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
-            <marker date="1461352325831" expanded="false" signature="437:626" placeholder="/**...*/" />
-            <marker date="1461352325831" expanded="false" signature="2802:2986" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -1242,10 +1413,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#checkForRoutesStrip#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
-            <element signature="e#5067#5138#0" expanded="false" />
+            <element signature="e#5803#5874#0" expanded="false" />
             <element signature="docComment;method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#buildAnyRoutekey#0;class#TestCodeBox#0" expanded="false" />
@@ -1258,6 +1430,7 @@
             <element signature="method#makeAllPermutations#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="e#16911#16936#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1267,13 +1440,14 @@
         <state relative-caret-position="624">
           <caret line="51" column="9" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="docComment;method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
-            <marker date="1461352325831" expanded="false" signature="437:626" placeholder="/**...*/" />
-            <marker date="1461352325831" expanded="false" signature="2802:2986" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -1283,10 +1457,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#checkForRoutesStrip#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
-            <element signature="e#5067#5138#0" expanded="false" />
+            <element signature="e#5803#5874#0" expanded="false" />
             <element signature="docComment;method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#buildAnyRoutekey#0;class#TestCodeBox#0" expanded="false" />
@@ -1299,6 +1474,7 @@
             <element signature="method#makeAllPermutations#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="e#16911#16936#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1308,13 +1484,14 @@
         <state relative-caret-position="896">
           <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="docComment;method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
-            <marker date="1461352325831" expanded="false" signature="437:626" placeholder="/**...*/" />
-            <marker date="1461352325831" expanded="false" signature="2802:2986" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -1324,10 +1501,11 @@
         <state relative-caret-position="88">
           <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#checkForRoutesStrip#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
-            <element signature="e#5067#5138#0" expanded="false" />
+            <element signature="e#5803#5874#0" expanded="false" />
             <element signature="docComment;method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#buildAnyRoutekey#0;class#TestCodeBox#0" expanded="false" />
@@ -1340,6 +1518,7 @@
             <element signature="method#makeAllPermutations#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="e#16911#16936#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1349,13 +1528,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="docComment;method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
             <element signature="method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
-            <marker date="1461352325831" expanded="false" signature="437:626" placeholder="/**...*/" />
-            <marker date="1461352325831" expanded="false" signature="2802:2986" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -1363,31 +1543,16 @@
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.7.0_79/src.zip!/java/lang/ClassLoader.java" />
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.7.0_79/src.zip!/java/net/URLClassLoader.java" />
     <entry file="file://$PROJECT_DIR$/build.xml" />
-    <entry file="file://$PROJECT_DIR$/src/roryunittest/RoryUnitTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
-          <folding>
-            <element signature="docComment;class#RoryUnitTest#0" expanded="false" />
-            <element signature="method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
-            <element signature="docComment;method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
-            <element signature="method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
-            <element signature="method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
-            <marker date="1461352325831" expanded="false" signature="437:626" placeholder="/**...*/" />
-            <marker date="1461352325831" expanded="false" signature="2802:2986" placeholder="/**...*/" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/RTools/TestCodeBox.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="129" column="7" selection-start-line="129" selection-start-column="7" selection-end-line="129" selection-end-column="7" />
+        <state relative-caret-position="260">
+          <caret line="363" column="52" selection-start-line="363" selection-start-column="52" selection-end-line="363" selection-end-column="52" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#checkForRoutesStrip#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#buildRoutekeyStripLeft#0;class#TestCodeBox#0" expanded="false" />
-            <element signature="e#5067#5138#0" expanded="false" />
+            <element signature="e#5803#5874#0" expanded="false" />
             <element signature="docComment;method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#buildRoutekey#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#buildAnyRoutekey#0;class#TestCodeBox#0" expanded="false" />
@@ -1400,6 +1565,24 @@
             <element signature="method#makeAllPermutations#0;class#TestCodeBox#0" expanded="false" />
             <element signature="docComment;method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
             <element signature="method#showDebugMessage#0;class#TestCodeBox#0" expanded="false" />
+            <element signature="e#16911#16936#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/roryunittest/RoryUnitTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="method#testBuildRoutekey#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="method#testBuildAnyRoutekey#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="docComment;method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
+            <element signature="method#testBuildRoutekeysStripLeft#0;class#RoryUnitTest#0" expanded="false" />
           </folding>
         </state>
       </provider>

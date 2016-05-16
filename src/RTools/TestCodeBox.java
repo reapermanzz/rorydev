@@ -1,18 +1,35 @@
 package RTools;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.*;
 
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.config.Registry;
+import org.apache.http.config.RegistryBuilder;
+import org.apache.http.conn.scheme.PlainSocketFactory;
+import org.apache.http.conn.socket.ConnectionSocketFactory;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONArray;
+
+import org.apache.http.HttpEntity.*;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.HttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.util.EntityUtils;
+
+import javax.net.ssl.SSLSocketFactory;
+import javax.xml.ws.http.HTTPException;
+
 
 public class TestCodeBox {
 
@@ -318,5 +335,41 @@ public class TestCodeBox {
 
     public void setdebugMode(Boolean status) {
         this.debugMode = status;
+    }
+
+    public String attemptHTTPSPostConnection(String link, ArrayList <NameValuePair> parameters){
+        try {
+            System.setProperty("https.protocols", "TLSv1.1");
+
+            SSLContext context =
+
+            Registry<ConnectionSocketFactory> socketFactoryRegistry = RegistryBuilder.<ConnectionSocketFactory>create()
+                    .register("https", new SSLSocketFactory(sslcontext, hostnameVerifier))
+                    .build();
+            CloseableHttpClient client = HttpClients.custom().build();
+            HttpPost post = new HttpPost(link);
+            if(parameters != null){
+                post.setEntity(new UrlEncodedFormEntity(parameters,"UTF-8"));
+            }
+            CloseableHttpResponse response = client.execute(post);
+            HttpEntity responseEntity = response.getEntity();
+
+            if (responseEntity != null){
+                BufferedReader reader = new BufferedReader(new InputStreamReader(responseEntity.getContent()));
+                StringBuffer result = new StringBuffer();
+                String line = "";
+                while ((line = reader.readLine()) != null) {
+                    result.append(line);
+                }
+                this.showDebugMessage("HTTP Response: "+ result);
+            }
+        }
+        catch(HTTPException e){
+            this.showDebugMessage("Error setting up HTTPS Connection: " + e);
+        }
+        catch(IOException e){
+            this.showDebugMessage("IO Exception: " + e);
+        }
+        return "finished running";
     }
 }

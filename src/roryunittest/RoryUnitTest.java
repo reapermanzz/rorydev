@@ -17,6 +17,21 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+import org.apache.http.HttpEntity.*;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.HttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.util.EntityUtils;
+
+import javax.xml.ws.http.HTTPException;
+
 /**
  * @author ReaperMan
  */
@@ -106,5 +121,15 @@ public class RoryUnitTest {
         int permutations = ((qualifierSize-1)*2)-1;
         assertSame(listOfRouteKeys.size(), permutations);
         System.out.println("testBuildRoutekeysStripLeft successful");
+    }
+
+    @Test
+    public void testGreaterThanTLS1HTTPS(){
+        ArrayList <NameValuePair> parameters = null;
+        String URL = "https://tls1test.salesforce.com";
+
+        TestCodeBox tb = new TestCodeBox();
+        tb.setdebugMode(true);
+        tb.attemptHTTPSPostConnection(URL, parameters);
     }
 }

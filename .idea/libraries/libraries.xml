@@ -5,6 +5,10 @@
       <root url="jar://$PROJECT_DIR$/.idea/libraries/hamcrest-core-1.3.jar!/" />
       <root url="jar://$PROJECT_DIR$/.idea/libraries/json.jar!/" />
       <root url="jar://$PROJECT_DIR$/.idea/libraries/junit-4.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/.idea/libraries/commons-codec-1.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/.idea/libraries/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/.idea/libraries/httpclient-4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/.idea/libraries/httpcore-4.4.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
