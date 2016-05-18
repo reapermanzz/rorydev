@@ -126,7 +126,8 @@ public class RoryUnitTest {
     @Test
     public void testGreaterThanTLS1HTTPS(){
         ArrayList <NameValuePair> parameters = null;
-        String URL = "https://tls1test.salesforce.com";
+        String URL = "https://tls1test.salesforce.com/s/";
+        String URL2 = "https://www.yahoo.com";
 
         TestCodeBox tb = new TestCodeBox();
         tb.setdebugMode(true);

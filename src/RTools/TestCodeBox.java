@@ -1,6 +1,8 @@
 package RTools;
 
 import java.io.*;
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
 import com.google.common.collect.ImmutableSet;
@@ -10,6 +12,9 @@ import org.apache.http.config.Registry;
 import org.apache.http.config.RegistryBuilder;
 import org.apache.http.conn.scheme.PlainSocketFactory;
 import org.apache.http.conn.socket.ConnectionSocketFactory;
+import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
+import org.apache.http.impl.execchain.ProtocolExec;
+import org.apache.http.ssl.SSLContexts;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONArray;
@@ -27,8 +32,13 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
+import javax.net.SocketFactory;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLException;
 import javax.net.ssl.SSLSocketFactory;
 import javax.xml.ws.http.HTTPException;
+
+import static org.apache.http.conn.ssl.SSLConnectionSocketFactory.BROWSER_COMPATIBLE_HOSTNAME_VERIFIER;
 
 
 public class TestCodeBox {
@@ -92,7 +102,8 @@ public class TestCodeBox {
         return "Finished Running";
     }
 
-    /**This method is designed to create a list of routekeys to query for, using a strip-off logic and wildcard replacement.
+    /**
+     * This method is designed to create a list of routekeys to query for, using a strip-off logic and wildcard replacement.
      * Essentially is first strips off the last qualifier, tries that, then replaces that stripped off qualifier with
      * an "any" wildcard, then rinse and repeat until the last qualifier, never replacing the first, as its the routing Rule.
      *
@@ -103,7 +114,7 @@ public class TestCodeBox {
     public ArrayList<String> buildRoutekeyStripLeft(ArrayList<String> qualifiers) {
         //initialize the first route key build.
         String routeKey = new String(buildRoutekey(qualifiers));
-        ArrayList <String> protectOriginalQualifiers = new ArrayList<String>(qualifiers);
+        ArrayList<String> protectOriginalQualifiers = new ArrayList<String>(qualifiers);
         ArrayList<String> routeKeys = new ArrayList<String>();
         int qualifierSize = qualifiers.size();
         int firstTimeCounter = qualifiers.size(); //holds a never-changing original size of qualifiers.
@@ -119,7 +130,7 @@ public class TestCodeBox {
                 callForRoute(routeKey);
             } else {
                 //showDebugMessage("Regular...");
-                if(qualifierSize > 1){ //this ensures the routing Rule doesn't get added to the set by itself,
+                if (qualifierSize > 1) { //this ensures the routing Rule doesn't get added to the set by itself,
                     // i.e. "support" rather than support.any.  We would never query JUST for a routing rule.
                     //always routing Rule + qualifiers(1+);
                     routeKeys.add(routeKey); //add the version of the routeKey WITHOUT the any wildcard too, just stripped.
@@ -263,7 +274,8 @@ public class TestCodeBox {
         } else {
             return true;
         }
-}
+    }
+
     /**
      * The purpose of this is to create a powerset of array positions that represent all possible combinations of qualifier
      * array to replace as *any*.  It automatically generates, based on the size of the qualifier set, what positions need to change to
@@ -337,39 +349,60 @@ public class TestCodeBox {
         this.debugMode = status;
     }
 
-    public String attemptHTTPSPostConnection(String link, ArrayList <NameValuePair> parameters){
+    public String attemptHTTPSPostConnection(String link, ArrayList<NameValuePair> parameters, String[] protocols) {
         try {
-            System.setProperty("https.protocols", "TLSv1.1");
+            //System.setProperty("https.protocols", "TLSv1.1");
 
-            SSLContext context =
 
-            Registry<ConnectionSocketFactory> socketFactoryRegistry = RegistryBuilder.<ConnectionSocketFactory>create()
-                    .register("https", new SSLSocketFactory(sslcontext, hostnameVerifier))
+            CloseableHttpClient client = HttpClients.custom()
+                    .setSSLSocketFactory(createJSSESocketFactory(protocols))
                     .build();
-            CloseableHttpClient client = HttpClients.custom().build();
             HttpPost post = new HttpPost(link);
-            if(parameters != null){
-                post.setEntity(new UrlEncodedFormEntity(parameters,"UTF-8"));
+
+            if (parameters != null) {
+                post.setEntity(new UrlEncodedFormEntity(parameters, "UTF-8"));
             }
             CloseableHttpResponse response = client.execute(post);
             HttpEntity responseEntity = response.getEntity();
 
-            if (responseEntity != null){
+            if (responseEntity != null) {
                 BufferedReader reader = new BufferedReader(new InputStreamReader(responseEntity.getContent()));
                 StringBuffer result = new StringBuffer();
                 String line = "";
                 while ((line = reader.readLine()) != null) {
                     result.append(line);
                 }
-                this.showDebugMessage("HTTP Response: "+ result);
+                this.showDebugMessage("HTTP Response: " + result);
             }
-        }
-        catch(HTTPException e){
+        } catch (HTTPException e) {
             this.showDebugMessage("Error setting up HTTPS Connection: " + e);
-        }
-        catch(IOException e){
+        } catch (IOException e) {
             this.showDebugMessage("IO Exception: " + e);
+        } catch (IllegalArgumentException e) {
+            this.showDebugMessage("Protocol given has an issue: " + e);
         }
+
         return "finished running";
+    }
+
+    public SSLConnectionSocketFactory createJSSESocketFactory(String[] protocols) {
+        try {
+            SSLContext sslContext = SSLContexts.custom()
+                    .build();
+
+            SSLConnectionSocketFactory factory = new SSLConnectionSocketFactory(
+                    sslContext,
+                    protocols,
+                    null,
+                    BROWSER_COMPATIBLE_HOSTNAME_VERIFIER);
+            return factory;
+
+        } catch (NoSuchAlgorithmException e) {
+            this.showDebugMessage("No such algorithm, key management exception: " + e);
+        } catch (KeyManagementException e) {
+            this.showDebugMessage("Key management exception: " + e);
+        }
+
+        return null;
     }
 }
