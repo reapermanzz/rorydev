@@ -131,6 +131,6 @@ public class RoryUnitTest {
 
         TestCodeBox tb = new TestCodeBox();
         tb.setdebugMode(true);
-        tb.attemptHTTPSPostConnection(URL, parameters);
+        tb.attemptHTTPSPostConnection(URL, parameters, new String[]{"TLSv1.1"});
     }
 }
