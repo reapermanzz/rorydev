@@ -5,40 +5,19 @@ import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
-import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
 import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.config.Registry;
-import org.apache.http.config.RegistryBuilder;
-import org.apache.http.conn.scheme.PlainSocketFactory;
-import org.apache.http.conn.socket.ConnectionSocketFactory;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
-import org.apache.http.impl.execchain.ProtocolExec;
 import org.apache.http.ssl.SSLContexts;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.json.JSONArray;
-
-import org.apache.http.HttpEntity.*;
 import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
-import org.apache.http.client.HttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.util.EntityUtils;
 
-import javax.net.SocketFactory;
 import javax.net.ssl.SSLContext;
-import javax.net.ssl.SSLException;
-import javax.net.ssl.SSLSocketFactory;
 import javax.xml.ws.http.HTTPException;
-
-import static org.apache.http.conn.ssl.SSLConnectionSocketFactory.BROWSER_COMPATIBLE_HOSTNAME_VERIFIER;
 
 
 public class TestCodeBox {
@@ -394,7 +373,7 @@ public class TestCodeBox {
                     sslContext,
                     protocols,
                     null,
-                    BROWSER_COMPATIBLE_HOSTNAME_VERIFIER);
+                    SSLConnectionSocketFactory.BROWSER_COMPATIBLE_HOSTNAME_VERIFIER);
             return factory;
 
         } catch (NoSuchAlgorithmException e) {

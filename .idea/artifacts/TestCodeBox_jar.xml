@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="TestCodeBox.jar">
+    <output-path>$PROJECT_DIR$/../TestHttpCon/.idea/libraries</output-path>
+    <root id="archive" name="TestCodeBox.jar">
+      <element id="module-output" name="RoryUnitTest" />
+      <element id="library" level="project" name="libraries" />
+    </root>
+  </artifact>
+</component>
