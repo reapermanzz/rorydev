@@ -352,16 +352,19 @@ public class TestCodeBox {
                     result.append(line);
                 }
                 this.showDebugMessage("HTTP Response: " + result);
+                return "***SUCCESS***"+result.toString();
             }
         } catch (HTTPException e) {
             this.showDebugMessage("Error setting up HTTPS Connection: " + e);
+            return e.toString();
         } catch (IOException e) {
             this.showDebugMessage("IO Exception: " + e);
+            return e.toString();
         } catch (IllegalArgumentException e) {
             this.showDebugMessage("Protocol given has an issue: " + e);
+            return e.toString();
         }
-
-        return "finished running";
+        return null;
     }
 
     public SSLConnectionSocketFactory createJSSESocketFactory(String[] protocols) {
